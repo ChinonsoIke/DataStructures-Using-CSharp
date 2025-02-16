@@ -3,6 +3,7 @@
 using LinkedList;
 using Stack.List;
 using Queue.List;
+using Graph;
 
 namespace SampleApp
 {
@@ -13,16 +14,18 @@ namespace SampleApp
         /// </summary>
         public static void Run()
         {
-            ListIt();
+            //ListIt();
 
-            Console.WriteLine("These books are stacked on top of one another:");
-            StackIt();
+            //Console.WriteLine("These books are stacked on top of one another:");
+            //StackIt();
 
-            Console.WriteLine("I will read these books in this order:");
-            QueueIt();
+            //Console.WriteLine("I will read these books in this order:");
+            //QueueIt();
 
-            string str = "}()";
-            Console.WriteLine($"CheckBrackets - {str} - : {CheckBrackets(str)}");
+            //string str = "}()";
+            //Console.WriteLine($"CheckBrackets - {str} - : {CheckBrackets(str)}");
+
+            GraphIt();
         }
 
         /// <summary>
@@ -134,6 +137,26 @@ namespace SampleApp
             if (newStack.Size() > 0) { valid = "invalid"; }
 
             return valid;
+        }
+
+        public static void GraphIt()
+        {
+            MultipurposeGraph<string> graph = new MultipurposeGraph<string>(5);
+            graph.AddNodeData("A", 0);
+            graph.AddNodeData("B", 1);
+            graph.AddNodeData("C", 2);
+            graph.AddNodeData("D", 3);
+            graph.AddNodeData("E", 4);
+
+            graph.AddEdge(0, 1, directed: false);
+            graph.AddEdge(1, 2, directed: false);
+            graph.AddEdge(1, 4, directed: false);
+            graph.AddEdge(0, 3, directed: false);
+
+            //graph.PrintMatrix();
+            graph.DFS();
+            Console.WriteLine();
+            graph.BFS();
         }
     }
 }
