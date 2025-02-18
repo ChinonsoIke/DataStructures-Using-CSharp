@@ -88,5 +88,49 @@ namespace Graph
                 }
             }
         }
+
+        public int[] Dijkstra(int startIndex)
+        {
+            // initial distances arr and set all to int.max, set start to 0
+            // intialize visited arr, set all to false
+            // loop through starting from source 
+            // find the min distance from source
+            // set distances of neighbors of min
+
+            bool[] visited = new bool[Size];
+            int[] distances = new int[Size];
+            Array.Fill(distances, int.MaxValue);
+            distances[startIndex] = 0;
+
+            for (int i = 0;i < Size; i++)
+            {
+                int minDistance = int.MaxValue;
+                int? nearestNode = null;
+
+                for(int j = 0; j < Size; j++)
+                {
+                    if(!visited[j] && distances[j] < minDistance)
+                    {
+                        minDistance = distances[j];
+                        nearestNode = j;
+                    }
+                }
+
+                if(!nearestNode.HasValue) break;
+
+                visited[nearestNode.Value] = true;
+
+                for(int j = 0;j < Size; j++)
+                {
+                    if (AdjMatrix[nearestNode.Value,j] > 0 && !visited[j])
+                    {
+                        int alt = distances[nearestNode.Value] + AdjMatrix[nearestNode.Value, j];
+                        if(alt < distances[j]) distances[j] = alt;
+                    }
+                }
+            }
+
+            return distances;
+        }
     }
 }

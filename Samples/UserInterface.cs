@@ -148,15 +148,19 @@ namespace SampleApp
             graph.AddNodeData("D", 3);
             graph.AddNodeData("E", 4);
 
-            graph.AddEdge(0, 1, directed: false);
-            graph.AddEdge(1, 2, directed: false);
-            graph.AddEdge(1, 4, directed: false);
-            graph.AddEdge(0, 3, directed: false);
+            graph.AddEdge(0, 1, directed: false, weight: 4);
+            graph.AddEdge(1, 2, directed: false, weight: 3);
+            graph.AddEdge(2, 4, directed: false, weight: 2);
+            graph.AddEdge(0, 3, directed: false, weight: 2);
+            graph.AddEdge(3, 4, directed: false, weight: 5);
 
             //graph.PrintMatrix();
-            graph.DFS();
-            Console.WriteLine();
-            graph.BFS();
+            //graph.DFS();
+            //Console.WriteLine();
+            //graph.BFS();
+
+            int[] distances = graph.Dijkstra(0);
+            Console.WriteLine(string.Join(",", distances));
         }
     }
 }
