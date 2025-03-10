@@ -17,7 +17,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ListTest", "ListTest\ListTe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StackTest", "StackTest\StackTest.csproj", "{A01E0B15-E4FC-4DA5-AD38-C0AA655FB910}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Graph", "Graph\Graph.csproj", "{9AB41FA9-8752-4973-8F36-FF89590D6CA3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Graph", "Graph\Graph.csproj", "{9AB41FA9-8752-4973-8F36-FF89590D6CA3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tree", "Tree\Tree.csproj", "{6DE8E387-6AFE-41D6-815B-954E38FDA3BA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +55,10 @@ Global
 		{9AB41FA9-8752-4973-8F36-FF89590D6CA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9AB41FA9-8752-4973-8F36-FF89590D6CA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9AB41FA9-8752-4973-8F36-FF89590D6CA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DE8E387-6AFE-41D6-815B-954E38FDA3BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DE8E387-6AFE-41D6-815B-954E38FDA3BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DE8E387-6AFE-41D6-815B-954E38FDA3BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DE8E387-6AFE-41D6-815B-954E38FDA3BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
