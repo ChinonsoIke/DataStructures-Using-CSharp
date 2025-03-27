@@ -2,7 +2,7 @@
 
 using LinkedList;
 
-namespace Queue.List
+namespace Queue
 {
     public class Queue<T>
     {

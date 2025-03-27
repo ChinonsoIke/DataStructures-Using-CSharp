@@ -1,8 +1,8 @@
 ﻿using System;
 
 using LinkedList;
-using Stack.List;
-using Queue.List;
+using Stack;
+using Queue;
 using Graph;
 using Tree;
 

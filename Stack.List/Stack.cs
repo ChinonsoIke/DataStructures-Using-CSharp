@@ -1,7 +1,7 @@
 ﻿using System;
 using LinkedList;
 
-namespace Stack.List
+namespace Stack
 {
     public class Stack<T>
     {
