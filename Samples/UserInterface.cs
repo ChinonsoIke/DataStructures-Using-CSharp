@@ -4,6 +4,7 @@ using LinkedList;
 using Stack.List;
 using Queue.List;
 using Graph;
+using Tree;
 
 namespace SampleApp
 {
@@ -25,7 +26,9 @@ namespace SampleApp
             //string str = "}()";
             //Console.WriteLine($"CheckBrackets - {str} - : {CheckBrackets(str)}");
 
-            GraphIt();
+            //GraphIt();
+
+            TreeIt();
         }
 
         /// <summary>
@@ -161,6 +164,37 @@ namespace SampleApp
 
             int[] distances = graph.Dijkstra(0);
             Console.WriteLine(string.Join(",", distances));
+        }
+
+        public static void TreeIt()
+        {
+            var node1 = new BinaryTreeNode<int>(23);
+            var node2 = new BinaryTreeNode<int>(83);
+            var node3 = new BinaryTreeNode<int>(12);
+            var node4 = new BinaryTreeNode<int>(4);
+            var node5 = new BinaryTreeNode<int>(80);
+
+            node1.Right = node2;
+            node1.Left = node3;
+            node2.Left = node4;
+            node3.Left = node5;
+
+            TreeUtil.BFS(node1);
+            Console.WriteLine();
+            //TreeUtil.PreOrderDFS(node1);
+            //Console.WriteLine();
+            //TreeUtil.InOrderDFS(node1);
+            //Console.WriteLine();
+            //TreeUtil.PostOrderDFS(node1);
+
+            TreeUtil.Insert(node1, 48);
+            TreeUtil.Insert(node1, 69);
+            TreeUtil.BFS(node1);
+            Console.WriteLine();
+
+            TreeUtil.Delete(node1, 12);
+            TreeUtil.BFS(node1);
+            Console.WriteLine();
         }
     }
 }

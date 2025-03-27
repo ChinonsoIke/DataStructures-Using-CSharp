@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -10,6 +10,7 @@
     <ProjectReference Include="..\LinkedList\LinkedList.csproj" />
     <ProjectReference Include="..\Queue.List\Queue.List.csproj" />
     <ProjectReference Include="..\Stack.List\Stack.List.csproj" />
+    <ProjectReference Include="..\Tree\Tree.csproj" />
   </ItemGroup>
 
 </Project>
