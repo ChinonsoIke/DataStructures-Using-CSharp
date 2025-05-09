@@ -9,7 +9,9 @@
     <ProjectReference Include="..\Graph\Graph.csproj" />
     <ProjectReference Include="..\LinkedList\LinkedList.csproj" />
     <ProjectReference Include="..\Queue.List\Queue.csproj" />
+    <ProjectReference Include="..\Queue\Queue.csproj" />
     <ProjectReference Include="..\Stack.List\Stack.csproj" />
+    <ProjectReference Include="..\Stack\Stack.csproj" />
     <ProjectReference Include="..\Tree\Tree.csproj" />
   </ItemGroup>
 

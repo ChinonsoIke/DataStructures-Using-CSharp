@@ -28,7 +28,9 @@ namespace SampleApp
 
             //GraphIt();
 
-            TreeIt();
+            //TreeIt();
+
+            BSTIt();
         }
 
         /// <summary>
@@ -195,6 +197,20 @@ namespace SampleApp
             TreeUtil.Delete(node1, 12);
             TreeUtil.BFS(node1);
             Console.WriteLine();
+        }
+
+        public static void BSTIt()
+        {
+            BinarySearchTreeNode node1 = new BinarySearchTreeNode(44);
+            BSTUtil.BFS(node1);
+
+            BSTUtil.Insert(node1, 22);
+            BSTUtil.Insert(node1, 11);
+            BSTUtil.Insert(node1, 46);
+            BSTUtil.BFS(node1);
+
+            Console.WriteLine(BSTUtil.Search(node1, 11));
+            Console.WriteLine(BSTUtil.Search(node1, 18));
         }
     }
 }
